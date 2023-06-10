@@ -20,3 +20,6 @@
    1. Show list items in cart items
    2. calculate subtotal
    3. show checkout button
+7. Save cart items to localStorage
+   1. localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+   2. Inside useEffect function setCartItems(localStorage.setItem('cartItems',) ? JSON.parse(localStorage.setItem('cartItems')): [])
