@@ -53,6 +53,25 @@ button {
   cursor: pointer;
 }
 
+button.badge {
+  background: #f04040;
+  border: none;
+  color: white;
+  width: 1.5rem;
+}
+
+button.add {
+  background: #40c0f0;
+  width: 1.5rem;
+}
+button.remove {
+  background: #f04040;
+  width: 1.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
 .col-1 {
   flex-basis: 100%;
 }

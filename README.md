@@ -14,3 +14,5 @@
 4. Create Product Component
    1. create product divs
    2. pass props to product components
+5. Implement Cart
+   1. Add and Remove items from the Cart
