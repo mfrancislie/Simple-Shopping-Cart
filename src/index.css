@@ -1,13 +1,61 @@
+/* Small Shopping Cart Css */
 body {
+  font-family: 'Helvetica';
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  margin: 0.5rem 0;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 1.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 0.768rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row.center {
+  align-items: center;
+}
+
+/* .block {
+  background-color: darkgray;
+} */
+
+.col-1 {
+  flex-basis: 100%;
+}
+.col-2 {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .col-1 {
+    flex: 1;
+  }
+  .col-2 {
+    flex: 2;
+  }
+}
+
+.block {
+  background-color: #bee8f7;
+  padding: 1rem;
+  margin: 0.5rem;
 }
