@@ -1,4 +1,5 @@
 import React from 'react';
+import Product from './Product';
 
 const Main = (props) => {
   const { products } = props;
@@ -7,7 +8,7 @@ const Main = (props) => {
       <h1>Products</h1>
       <div className="row">
         {products.map((product) => (
-          <h1>{product.name}</h1>
+          <Product key={product.id} product={product} />
         ))}
       </div>
     </div>
