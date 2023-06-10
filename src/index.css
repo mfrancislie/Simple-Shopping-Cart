@@ -93,3 +93,7 @@ button.remove {
   padding: 1rem;
   margin: 0.5rem;
 }
+
+.text-right {
+  text-align: right;
+}
