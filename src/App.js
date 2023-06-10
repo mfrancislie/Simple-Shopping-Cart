@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Basket from './components/Basket';
 import Main from './components/Main';
@@ -17,9 +17,11 @@ const App = () => {
         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
       );
       setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     } else {
       const newCartItems = [...cartItems, { ...product, qty: 1 }];
       setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
   };
 
@@ -29,13 +31,23 @@ const App = () => {
     if (exist.qty === 1) {
       const newCartItems = cartItems.filter((x) => x.id !== product.id);
       setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     } else {
       const newCartItems = cartItems.map((x) =>
         x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
       );
       setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
   };
+
+  useEffect(() => {
+    setCartItems(
+      localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems'))
+        : []
+    );
+  }, []);
 
   return (
     <div>
